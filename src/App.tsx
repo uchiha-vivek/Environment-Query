@@ -7,7 +7,7 @@ import Home from "./pages/home-page";
 const App: FC = () => {
   return (
     <>
-    <div className="h-screen bg-gradient-to-r from-green-950 to-green-800 " >
+    <div className="  " >
           <Routes>
             <Route path="/"  element={<Home/>} />
           </Routes>

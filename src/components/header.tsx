@@ -9,7 +9,7 @@ const Header : FC =  () => {
  }
     return (
         <>
-        <nav className="sticky top-0 z-50 backdrop-blur-lg border-b" >
+        <nav className="sticky top-0 z-50 backdrop-blur-lg border-b text-green-500 font-semibold " >
              <div className="container px-4 mx-auto relative text-sm " >
                         <div className="items-center flex justify-between " >
                                    <Link to='/' >
@@ -29,7 +29,22 @@ const Header : FC =  () => {
                                            </button>
                                    </div>
                         </div>
-                        // Hamburger Logic
+                       
+                        {
+                            hamburger && (
+                                <div className="w-full p-12 bg-neutral-900 fixed right z-20 flex flex-col items-center justify-center lgKhidden  ">
+                                      <ul>
+                                        <li className="py-4" >
+                                                   <Link to='/' >  About </Link>
+                                                   <Link to='/'> Contact us </Link>
+                                        </li>
+                                      </ul>
+                                      <div className="space-x-6 flex mt-5" >
+                                               <Link to='/'> Register </Link>
+                                        </div>
+                                    </div>
+                            )
+                        }
              </div>
         </nav>
         </>
